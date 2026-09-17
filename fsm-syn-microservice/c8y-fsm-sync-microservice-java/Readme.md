@@ -87,7 +87,7 @@ sync:
 Follow these steps to configure the tenant option category for SAP FSM integration:
 
 1. **Check Existing Categories:** Make sure there is no existing category in the DB named `sap.fsm`. Delete it if it exists.
-2. **Deploy Microservice:** Deploy the microservice with `settingsCategory` set to `sap.fsm` in its `cumulocity.json` manifest.
+2. **Deploy Microservice:** Deploy the microservice with `settingsCategory` set to `sap.fsm` in its `cumulocity.json` .
 3. **Category Registration:** The platform will automatically register the new tenant option category `sap.fsm`.
 4. **Create Tenant Options:** Using Cumulocity REST APIs, create the following tenant options under the `sap.fsm` category:
 
@@ -104,6 +104,7 @@ Follow these steps to configure the tenant option category for SAP FSM integrati
 }
 ```
 > **Note:** The `"service-call-version": "27"` property locks the API communication specifically to version 27 of the SAP FSM Service Call endpoint.
+
 5. **Re-subscribe Microservice:** Unsubscribe and then re-subscribe the microservice to apply the tenant option configurations.
 
 ---
