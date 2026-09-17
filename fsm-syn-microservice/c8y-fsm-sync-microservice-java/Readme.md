@@ -32,6 +32,7 @@ A scheduled, bidirectional sync bridge connecting **Cumulocity IoT Service Reque
 | Service Req.  | |    SAP FSM    |
 | Mgmt Service  | | External API  |
 +---------------+ +---------------+
+```
 -------------------
 ## Key Features
 - **Scheduled Sync (X-Minute Intervals):** Runs automated background batch execution every X minutes to check for state changes.
