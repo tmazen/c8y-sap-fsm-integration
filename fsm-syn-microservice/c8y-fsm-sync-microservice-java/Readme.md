@@ -42,3 +42,13 @@ A scheduled, bidirectional sync bridge connecting **Cumulocity Service Request M
 - **Idempotent Operations:** Employs external ID tracking across systems to guarantee that retried operations or identical payloads do not generate duplicate tickets.
 - **Resilient Error Handling:** Built-in retry mechanism with exponential backoff to handle transient network issues or SAP FSM/Cumulocity API rate limits smoothly.
 - **Comprehensive Logging & Monitoring:** Structured logs detailing sync progress, payload transformations, retry counts, and execution metrics for operational visibility.
+--------------
+## Component Architecture
+
+| **Component**           | **Functionality**                                                                                                           |
+|-------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| **Scheduler**           | Internal timer component that triggers the synchronization routine every 5 minutes.                                         |
+| **Sync Service**        | The central orchestrator handling data mapping, status state machines, idempotency validation, and retry execution.         |
+| **SR Service Client**   | Dedicated REST client interacting with the internal **Service Request Mgmt Service** in Cumulocity.                         |
+| **FSM Service Client**  | Dedicated REST client managing OAuth authentication, token management, and data exchange with the **SAP FSM External API**. |
+---------
