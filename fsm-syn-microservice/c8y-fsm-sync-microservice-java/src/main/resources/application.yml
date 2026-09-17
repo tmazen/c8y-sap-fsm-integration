@@ -1,0 +1,70 @@
+c8y:
+  baseURL: ${C8Y_BASEURL}
+  name: c8y-fsm-sync-ms-java
+  bootstrap:
+    tenant: ${C8Y_BOOTSTRAP_TENANT}
+    user: ${C8Y_BOOTSTRAP_USER}
+    password: ${C8Y_BOOTSTRAP_PASSWORD}
+
+application:
+  name: c8y-fsm-sync-ms-java
+
+spring:
+  application:
+    name: c8y-fsm-sync-ms-java
+
+server:
+  port: 8080
+# Service Request Configuration
+service-request:
+  c8y-tenant-url: ${C8Y_BASEURL} #https://c8y-windmill.eu-latest.cumulocity.com
+  service-request-ms-url: /service/service-request-mgmt/api/service
+
+# FSM Configuration
+fsm:
+  #api-url: https://de.fsm.cloud.sap
+  #auth-url: https://de.fsm.cloud.sap
+  #header-account-id: 97799
+  #header-company-id: 111514
+  #header-client-id: Cumulocity-Client
+  #header-client-version: 1.0
+
+  #client-id: 00017e07-0f03-4dd5-b0ff-ffcd8679dc3c
+  #client-secret: 3e5b969e-6807-4d56-971f-0b860f88a013
+  #service-call-version: 27
+  connection-timeout: 30000
+  read-timeout: 60000
+  service-call-origin-c8y: Cumulocity
+
+  sync:
+    enabled: true
+    interval-minutes: 2
+    batch-size: 50
+    max-retries: 3
+
+# Health Configuration
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+# Logging Configuration
+logging:
+  level:
+    root: INFO
+    c8y.microservice.sap.fsm: DEBUG
+    com.cumulocity.microservice: DEBUG
+    org.springframework.web: INFO
+    org.springframework.scheduling: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

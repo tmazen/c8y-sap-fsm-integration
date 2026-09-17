@@ -1,0 +1,39 @@
+{
+  "apiVersion": "2",
+  "version": "1.0.39",
+  "provider": {
+    "name": "Cumulocity"
+  },
+  "isolation": "MULTI_TENANT",
+  "settingsCategory": "sap.fsm",
+  "replicas": 1,
+  "resources": {
+    "memory": "512Mi",
+    "cpu": "0.5"
+  },
+  "livenessProbe": {
+    "httpGet": {
+      "path": "/health",
+      "port": 80
+    },
+    "initialDelaySeconds": 120,
+    "periodSeconds": 10
+  },
+  "readinessProbe": {
+    "httpGet": {
+      "path": "/health",
+      "port": 80
+    },
+    "initialDelaySeconds": 150,
+    "periodSeconds": 10
+  },
+  "requiredRoles": [
+    "ROLE_INVENTORY_READ",
+    "ROLE_INVENTORY_ADMIN",
+    "ROLE_APPLICATION_MANAGEMENT_READ",
+    "ROLE_OPTION_MANAGEMENT_READ"
+  ],
+  "roles": [
+    "ROLE_SERVICE_REQUEST_READ"
+  ]
+}

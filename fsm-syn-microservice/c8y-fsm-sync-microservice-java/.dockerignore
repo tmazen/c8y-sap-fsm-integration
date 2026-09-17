@@ -1,0 +1,5 @@
+# Exclude local-only classes
+src/main/java/c8y/microservice/sap/fsm/config/local/**
+
+# Logs and temp files
+*.log
