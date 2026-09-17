@@ -33,3 +33,12 @@ A scheduled, bidirectional sync bridge connecting **Cumulocity IoT Service Reque
 | Mgmt Service  | | External API  |
 +---------------+ +---------------+
 -------------------
+## Key Features
+
+- **Scheduled Sync (5-Minute Intervals):** Runs automated background batch execution every 5 minutes to check for state changes.
+- **Bidirectional Synchronization:**
+  - **Forward Sync:** Pushes new service requests (`new requests -> FSM`) created in Cumulocity over to SAP FSM.
+  - **Reverse Sync:** Pulls status updates (`status updates <- FSM`) from SAP FSM back into Cumulocity to keep lifecycle states aligned.
+- **Idempotent Operations:** Employs external ID tracking across systems to guarantee that retried operations or identical payloads do not generate duplicate tickets.
+- **Resilient Error Handling:** Built-in retry mechanism with exponential backoff to handle transient network issues or SAP FSM/Cumulocity API rate limits smoothly.
+- **Comprehensive Logging & Monitoring:** Structured logs detailing sync progress, payload transformations, retry counts, and execution metrics for operational visibility.
