@@ -47,7 +47,7 @@ A scheduled, bidirectional sync bridge connecting **Cumulocity Service Request M
 
 | **Component**           | **Functionality**                                                                                                           |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| **Scheduler**           | Internal timer component that triggers the synchronization routine every 5 minutes.                                         |
+| **Scheduler**           | Internal timer component that triggers the synchronization routine every X minutes.                                         |
 | **Sync Service**        | The central orchestrator handling data mapping, status state machines, idempotency validation, and retry execution.         |
 | **SR Service Client**   | Dedicated REST client interacting with the internal **Service Request Mgmt Service** in Cumulocity.                         |
 | **FSM Service Client**  | Dedicated REST client managing OAuth authentication, token management, and data exchange with the **SAP FSM External API**. |
