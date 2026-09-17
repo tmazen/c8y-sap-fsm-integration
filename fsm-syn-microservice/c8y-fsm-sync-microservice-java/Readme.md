@@ -65,3 +65,8 @@ A scheduled, bidirectional sync bridge connecting **Cumulocity Service Request M
    - **Sync Service** queries **FSM Service Client** for state/status changes on active, linked FSM tickets.
    - If an FSM ticket state has changed, the update is dispatched via **SR Service Client** back to **Service Request Mgmt Service**.
 -----------
+## Prerequisites
+
+- Access to the SAP FSM Platform.
+- The **Service Request Mgmt Service Microservice** must be deployed on the same Cumulocity tenant.
+--------
