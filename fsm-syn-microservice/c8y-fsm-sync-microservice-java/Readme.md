@@ -70,3 +70,39 @@ A scheduled, bidirectional sync bridge connecting **Cumulocity Service Request M
 - Access to the SAP FSM Platform.
 - The **Service Request Mgmt Service Microservice** must be deployed on the same Cumulocity tenant.
 --------
+## Configuration
+
+### Application YAML Setup
+
+Set the sync interval in `application.yml`:
+
+```yaml
+sync:
+  interval-minutes: 2
+```
+
+### Tenant Option Configuration
+
+Follow these steps to configure the tenant option category for SAP FSM integration:
+
+1. **Check Existing Categories:** Make sure there is no existing category in the DB named `sap.fsm`. Delete it if it exists.
+2. **Deploy Microservice:** Deploy the microservice with `settingsCategory` set to `sap.fsm` in its `cumulocity.json` manifest.
+3. **Category Registration:** The platform will automatically register the new tenant option category `sap.fsm`.
+4. **Create Tenant Options:** Using Cumulocity REST APIs, create the following tenant options under the `sap.fsm` category:
+
+```json
+{
+  "api-url": "<SAP FSM API URL>", # ex: https://de.fsm.cloud.sap
+  "header-account-id": "<header-account-id>",
+  "header-company-id": "<header-company-id>",
+  "header-client-id": "<header-client-id>",
+  "header-client-version": "<header-client-version>",
+  "client-id": "<Client ID>",
+  "credentials.client-secret": "<credentials.client-secret>",
+  "service-call-version": "27"
+}
+```
+
+5. **Re-subscribe Microservice:** Unsubscribe and then re-subscribe the microservice to apply the tenant option configurations.
+
+---
