@@ -5,7 +5,7 @@ A scheduled, bidirectional sync bridge connecting **Cumulocity IoT Service Reque
 -------------------
 ## Architecture Overview
 
-```text
+```
 +------------------------------------------------------+
 |                    Cumulocity FSM Sync Microservice  |
 |                                                      |
