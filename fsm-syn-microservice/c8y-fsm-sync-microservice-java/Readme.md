@@ -1,6 +1,6 @@
 # Cumulocity FSM Sync Microservice
 
-A scheduled, bidirectional sync bridge connecting **Cumulocity IoT Service Request Management Service** with **SAP Field Service Management (FSM)**. This microservice ensures seamless, idempotent synchronization between IoT-triggered service requests and external field service operations.
+A scheduled, bidirectional sync bridge connecting **Cumulocity Service Request Management Service** with **SAP Field Service Management (FSM)**. This microservice ensures seamless, idempotent synchronization between IoT-triggered service requests and external field service operations.
 
 -------------------
 ## Architecture Overview
