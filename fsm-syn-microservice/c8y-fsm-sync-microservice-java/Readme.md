@@ -108,3 +108,28 @@ Follow these steps to configure the tenant option category for SAP FSM integrati
 5. **Re-subscribe Microservice:** Unsubscribe and then re-subscribe the microservice to apply the tenant option configurations.
 
 ---
+
+## Building and Packaging
+
+### Step 1: Maven Build
+```bash
+mvn clean package -DskipTests
+```
+
+### Step 2: Build Docker Image
+```bash
+docker build --platform linux/amd64 -t c8y-fsm-sync-ms:1.0.0-SNAPSHOT .
+```
+
+### Step 3: Package Microservice for Cumulocity
+1. Use the existing `cumulocity.json`
+2. Export docker image tarball:
+   ```bash
+   docker save c8y-fsm-sync-ms:1.0.0-SNAPSHOT -o image.tar
+   ```
+3. Zip with manifest:
+   ```bash
+   zip c8y-fsm-sync-ms:1.0.0-SNAPSHOT.zip image.tar cumulocity.json
+   ```
+
+---
