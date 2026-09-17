@@ -1,6 +1,7 @@
 # Cumulocity FSM Sync Microservice
 
-A scheduled, bidirectional sync bridge connecting **Cumulocity Service Request Management Service** with **SAP Field Service Management (FSM)**. This microservice ensures seamless, idempotent synchronization between IoT-triggered service requests and external field service operations.
+A scheduled, bidirectional sync bridge connecting **Cumulocity Service Request Management Service** with **SAP Field Service Management (FSM)**. Built against **SAP FSM Service Call API version 27**, this microservice ensures seamless, idempotent synchronization between IoT-triggered service requests and external field service operations.
+
 
 -------------------
 ## Architecture Overview
@@ -50,7 +51,7 @@ A scheduled, bidirectional sync bridge connecting **Cumulocity Service Request M
 | **Scheduler**           | Internal timer component that triggers the synchronization routine every X minutes.                                         |
 | **Sync Service**        | The central orchestrator handling data mapping, status state machines, idempotency validation, and retry execution.         |
 | **SR Service Client** | Dedicated REST client interacting with the internal [**Service Request Mgmt Service**](https://github.com/Cumulocity-IoT/cumulocity-microservice-service-request-mgmt/) in Cumulocity. |
-| **FSM Service Client**  | Dedicated REST client managing OAuth authentication, token management, and data exchange with the **SAP FSM External API**. |
+| **FSM Service Client**  | Dedicated REST client managing OAuth authentication, token management, and data exchange with the **SAP FSM External API (v27)**. |
 ---------
 ## Data Flow & Synchronization Lifecycle
 
@@ -102,7 +103,7 @@ Follow these steps to configure the tenant option category for SAP FSM integrati
   "service-call-version": "27"
 }
 ```
-
+> **Note:** The `"service-call-version": "27"` property locks the API communication specifically to version 27 of the SAP FSM Service Call endpoint.
 5. **Re-subscribe Microservice:** Unsubscribe and then re-subscribe the microservice to apply the tenant option configurations.
 
 ---
