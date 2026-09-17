@@ -17,21 +17,11 @@ server:
   port: 8080
 # Service Request Configuration
 service-request:
-  c8y-tenant-url: ${C8Y_BASEURL} #https://c8y-windmill.eu-latest.cumulocity.com
+  c8y-tenant-url: ${C8Y_BASEURL}
   service-request-ms-url: /service/service-request-mgmt/api/service
 
 # FSM Configuration
 fsm:
-  #api-url: https://de.fsm.cloud.sap
-  #auth-url: https://de.fsm.cloud.sap
-  #header-account-id: 97799
-  #header-company-id: 111514
-  #header-client-id: Cumulocity-Client
-  #header-client-version: 1.0
-
-  #client-id: 00017e07-0f03-4dd5-b0ff-ffcd8679dc3c
-  #client-secret: 3e5b969e-6807-4d56-971f-0b860f88a013
-  #service-call-version: 27
   connection-timeout: 30000
   read-timeout: 60000
   service-call-origin-c8y: Cumulocity
