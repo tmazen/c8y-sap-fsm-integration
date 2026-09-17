@@ -16,9 +16,9 @@ This guide outlines how to enable or disable maintenance mode in Cumulocity for 
    * **Type:** `Selection List`[cite: 7]
    * **Classification Level:** `PUBLIC`[cite: 7]
 
-![Create Custom Field Properties](image_1.png)[cite: 7]
+![Create Custom Field Properties](image_1.png)
 
-5. Click **Save**[cite: 7].
+5. Click **Save**.
 
 ---
 
@@ -36,7 +36,7 @@ This guide outlines how to enable or disable maintenance mode in Cumulocity for 
    * `Off` : `Off`[cite: 7]
    * `On` : `On`[cite: 7]
 
-![Custom Field Settings](image_3.png)[cite: 7]
+![Custom Field Settings](image_3.png)
 
 10. **Activate** the screen configuration[cite: 7].
 
@@ -62,7 +62,7 @@ Build and deploy the microservice to handle the incoming maintenance mode webhoo
    * **Description:** `Service Call - Update Device Maintenance Mode`[cite: 7]
    * **Type:** `Two - JavaScript support inside expressions`[cite: 7]
 
-![Edit Business Rule](image_4.png)[cite: 7]
+![Edit Business Rule](image_4.png)
 
 5. Configure the **Trigger on** section[cite: 7]:
    * **Event:** `Object Operation (Type TWO)`[cite: 7]
@@ -72,7 +72,7 @@ Build and deploy the microservice to handle the incoming maintenance mode webhoo
    * **Permissions:** `Current User - nothing more than user permissions`[cite: 7]
    * **Conditions:** `old.udf.deviceMaintenanceMode != new.udf.deviceMaintenanceMode`[cite: 7]
 
-![Trigger Configuration](image_5.png)[cite: 7]
+![Trigger Configuration](image_5.png)
 
 6. Configure **Execute Action #1**[cite: 7]:
    * **Action:** `Webhook`[cite: 7]
@@ -88,7 +88,7 @@ Build and deploy the microservice to handle the incoming maintenance mode webhoo
      }
      ```
 
-![Execute Action Configuration](image_6.png)[cite: 7]
+![Execute Action Configuration](image_6.png)
 
 7. Click **Update & Validate**[cite: 7].
 
