@@ -44,7 +44,7 @@ This guide outlines how to enable or disable maintenance mode in Cumulocity for 
 
 ## 3. Microservice Endpoint Setup
 
-Build and deploy the Cumulocity FSM Sync Microservice (../fsm-syn-microservice/) to handle the incoming maintenance mode webhook updates if it is not already deployed:
+Build and deploy the [Cumulocity FSM Sync Microservice] (../fsm-syn-microservice/) to handle the incoming maintenance mode webhook updates if it is not already deployed:
 
 * **Target Endpoint:** `maintenanceMode/updateMaintenanceMode`
 * **Service Name:** `c8y-fsm-sync-ms-java`
