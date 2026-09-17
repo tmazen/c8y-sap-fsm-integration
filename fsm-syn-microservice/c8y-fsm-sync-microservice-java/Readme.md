@@ -54,7 +54,7 @@ A scheduled, bidirectional sync bridge connecting **Cumulocity Service Request M
 ---------
 ## Data Flow & Synchronization Lifecycle
 
-1. **Trigger:** The **Scheduler** fires every 5 minutes, initiating a run in the **Sync Service**.
+1. **Trigger:** The **Scheduler** fires every X minutes, initiating a run in the **Sync Service**.
 
 2. **Push New Requests:**
    - **Sync Service** calls **SR Service Client** to query un-synced or recently updated service requests from **Service Request Mgmt Service**.
