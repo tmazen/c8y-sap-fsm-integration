@@ -52,3 +52,16 @@ A scheduled, bidirectional sync bridge connecting **Cumulocity Service Request M
 | **SR Service Client** | Dedicated REST client interacting with the internal [**Service Request Mgmt Service**](https://github.com/Cumulocity-IoT/cumulocity-microservice-service-request-mgmt/)) in Cumulocity. |
 | **FSM Service Client**  | Dedicated REST client managing OAuth authentication, token management, and data exchange with the **SAP FSM External API**. |
 ---------
+## Data Flow & Synchronization Lifecycle
+
+1. **Trigger:** The **Scheduler** fires every 5 minutes, initiating a run in the **Sync Service**.
+
+2. **Push New Requests:**
+   - **Sync Service** calls **SR Service Client** to query un-synced or recently updated service requests from **Service Request Mgmt Service**.
+   - Constructs the SAP FSM service call payload and calls **FSM Service Client** to create the ticket in **SAP FSM External API**.
+   - Records the returned FSM External ID in Cumulocity for future idempotency tracking.
+
+3. **Pull Status Updates:**
+   - **Sync Service** queries **FSM Service Client** for state/status changes on active, linked FSM tickets.
+   - If an FSM ticket state has changed (e.g., `RELEASED`, `IN_PROGRESS`, `CLOSED`), the update is dispatched via **SR Service Client** back to **Service Request Mgmt Service**.
+-----------
