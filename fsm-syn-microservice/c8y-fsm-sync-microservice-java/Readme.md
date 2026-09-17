@@ -63,5 +63,5 @@ A scheduled, bidirectional sync bridge connecting **Cumulocity Service Request M
 
 3. **Pull Status Updates:**
    - **Sync Service** queries **FSM Service Client** for state/status changes on active, linked FSM tickets.
-   - If an FSM ticket state has changed (e.g., `RELEASED`, `IN_PROGRESS`, `CLOSED`), the update is dispatched via **SR Service Client** back to **Service Request Mgmt Service**.
+   - If an FSM ticket state has changed, the update is dispatched via **SR Service Client** back to **Service Request Mgmt Service**.
 -----------
