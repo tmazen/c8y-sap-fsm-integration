@@ -1,6 +1,6 @@
 # Steps to Open Cumulocity in iFrame & Use as an SAP FSM Extension
 
-This guide details how to embed a Cumulocity IoT Cockpit dashboard into an iFrame and host it as an extension inside SAP Field Service Management (FSM).
+This guide details how to embed a Cumulocity Cockpit dashboard into an iFrame and host it as an extension inside SAP Field Service Management (FSM).
 
 ---
 
