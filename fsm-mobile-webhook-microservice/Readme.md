@@ -16,7 +16,7 @@ The SAP FSM Mobile App can be extended to view information from external platfor
 
 To overcome these constraints, the integration utilizes two core components:
 
-1. **Proxy Script (`fsm-bridge.py`):** Hosted on an external server (e.g., AWS EC2). It accepts unauthenticated `POST` requests from the SAP FSM Mobile App, injects the necessary tenant authorization headers, and forwards the requests to the custom microservice.
+1. **[Proxy Script (`fsm-bridge.py`)](./aws-script):** Hosted on an external server (e.g., AWS EC2). It accepts unauthenticated `POST` requests from the SAP FSM Mobile App, injects the necessary tenant authorization headers, and forwards the requests to the custom microservice.
 2. **Python Microservice (`c8y-fsm-mob-ms-py`):** A custom microservice deployed in the Cumulocity tenant that receives `POST` requests from the bridge script and redirects the request to the target Cumulocity Dashboard stored in Tenant Options.
 
 ---
