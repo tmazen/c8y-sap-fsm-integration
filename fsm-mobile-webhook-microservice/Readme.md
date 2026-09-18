@@ -54,7 +54,7 @@ To overcome these constraints, the integration utilizes two core components:
    ```bash
    mkdir fsm-mob-bridge && cd fsm-mob-bridge
    ```
-3. **Install Dependencies:** Install Python 3, Pip 3, and ngrok (create a free account at ngrok.com if needed).
+3. **Install Dependencies:** Install Python 3, Pip 3, and [ngrok](https://ngrok.com/) (create a free account at ngrok.com if needed).
 4. **Configure ngrok:**
    ```bash
    ngrok config add-authtoken <Auth Token>
