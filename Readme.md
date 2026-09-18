@@ -35,7 +35,6 @@ This repository contains a comprehensive suite of microservices, extensions, and
   * **Scheduled Sync:** Polls for updates at configurable intervals (default: 2 minutes).
   * **Bidirectional Lifecycle:** Pushes new Cumulocity service requests to SAP FSM and pulls ticket status changes back into Cumulocity.
   * **Idempotency & Resilience:** Tracks external IDs to prevent duplicate service calls and executes retries on transient network errors.
-* **Config Category:** `sap.fsm`
 
 ---
 
