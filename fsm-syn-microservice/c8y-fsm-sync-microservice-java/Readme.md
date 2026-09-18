@@ -53,6 +53,16 @@ A scheduled, bidirectional sync bridge connecting **Cumulocity Service Request M
 | **SR Service Client** | Dedicated REST client interacting with the internal [**Service Request Mgmt Service**](https://github.com/Cumulocity-IoT/cumulocity-microservice-service-request-mgmt/) in Cumulocity. |
 | **FSM Service Client**  | Dedicated REST client managing OAuth authentication, token management, and data exchange with the **SAP FSM External API (v27)**. |
 ---------
+## Microservice Endpoints
+
+| Endpoint | Method | Description | Payload Example |
+| --- | --- | --- | --- |
+| `/sync/trigger` | `POST` | Manually triggers the bidirectional sync routine outside the schedule. | *None* |
+| `/maintenanceMode/updateMaintenanceMode` | `POST` | Receives webhook triggers from SAP FSM Business Rules to enable/disable device maintenance mode in Cumulocity. | `{"serviceRequestId": "<externalId>", "maintenanceMode": "On` |
+| `/health` | `GET` | Microservice health check status. | *None* |
+
+---
+
 ## Data Flow & Synchronization Lifecycle
 
 1. **Trigger:** The **Scheduler** fires every X minutes, initiating a run in the **Sync Service**.
