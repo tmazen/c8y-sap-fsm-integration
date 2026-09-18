@@ -57,7 +57,7 @@ A scheduled, bidirectional sync bridge connecting **Cumulocity Service Request M
 
 | Endpoint | Method | Description | Payload Example |
 | --- | --- | --- | --- |
-| `/sync/trigger` | `POST` | Manually triggers the bidirectional sync routine outside the schedule. | *None* |
+| `/scheduler` | `-` | Background scheduler endpoint executing the recurring synchronization logic according to configured interval minutes.. | *None* |
 | `/maintenanceMode/updateMaintenanceMode` | `POST` | Receives webhook triggers from SAP FSM Business Rules to enable/disable device maintenance mode in Cumulocity. | `{"serviceRequestId": "<externalId>", "maintenanceMode": "On` |
 | `/health` | `GET` | Microservice health check status. | *None* |
 
