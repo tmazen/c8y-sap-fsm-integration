@@ -20,10 +20,10 @@ This repository contains a comprehensive suite of microservices, extensions, and
 
 | Project Component | Technology Stack | Description |
 | --- | --- | --- |
-| **`fsm-syn-microservice/c8y-fsm-sync-microservice-java`** | Java 17, Spring Boot, Cumulocity Microservice SDK | Core scheduled bridge service. Syncs Cumulocity Service Requests with SAP FSM Service Calls (API v27) bi-directionally every 2 minutes. |
-| **`fsm-busines-rules`** | SAP FSM Business Rules (JavaScript / Webhook) | Triggers real-time actions from SAP FSM to Cumulocity. Enables/disables device **Maintenance Mode** in Cumulocity upon Service Call updates. |
-| **`fsm-extension`** | HTML5, AWS S3, iFrame Embedding | Embeds live Cumulocity Cockpit dashboards directly into the SAP FSM Web Application (Service Call Modal Outlet Tab). |
-| **`fsm-mobile-webhook-microservice`** | Python 3, Docker, EC2 Proxy Bridge | Extends the SAP FSM Mobile App via Web Containers to display Cumulocity dashboards on mobile devices. |
+| **[`fsm-syn-microservice/c8y-fsm-sync-microservice-java`](./fsm-syn-microservice/c8y-fsm-sync-microservice-java)** | Java 17, Spring Boot, Cumulocity Microservice SDK | Core scheduled bridge service. Syncs Cumulocity Service Requests with SAP FSM Service Calls (API v27) bi-directionally every 2 minutes. |
+| **[`fsm-busines-rules`](./fsm-busines-rules)** | SAP FSM Business Rules (JavaScript / Webhook) | Triggers real-time actions from SAP FSM to Cumulocity. Enables/disables device **Maintenance Mode** in Cumulocity upon Service Call updates. |
+| **[`fsm-extension`](./fsm-extension)** | HTML5, AWS S3, iFrame Embedding | Embeds live Cumulocity Cockpit dashboards directly into the SAP FSM Web Application (Service Call Modal Outlet Tab). |
+| **[`fsm-mobile-webhook-microservice`](./fsm-mobile-webhook-microservice)** | Python 3, Docker, EC2 Proxy Bridge | Extends the SAP FSM Mobile App via Web Containers to display Cumulocity dashboards on mobile devices. |
 
 ---
 
