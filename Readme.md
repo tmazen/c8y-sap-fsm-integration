@@ -66,7 +66,7 @@ This repository contains a comprehensive suite of microservices, extensions, and
 
 1. **Cumulocity Tenant:**
    * Administrative privileges to deploy microservices and configure tenant options.
-   * The core **Service Request Mgmt Service** microservice must be pre-deployed on the tenant.
+   * The core **[Service Request Mgmt Service](https://github.com/Cumulocity-IoT/cumulocity-microservice-service-request-mgmt/)** microservice must be pre-deployed on the tenant.
    * **Basic Authentication** enabled for iFrame dashboard embedding.
 2. **SAP FSM Account:**
    * Access to the SAP FSM Admin Portal and Shell (ex : `https://de.fsm.cloud.sap`).
