@@ -43,7 +43,7 @@ This guide details how to embed a Cumulocity Cockpit dashboard into an iFrame an
    ```
 3. Update target dashboard URLs to point through the `Cockpit-1` iFrame endpoint. Append `hideHeader=true` and `hideNavigator=true` query parameters to hide the navigation bars:
    ```text
-   https://<tenant-domain>/apps/cockpit-1/iframe.html?**hideHeader=true&hideNavigator=true**#/device/<device-id>/dashboard/<dashboard-id>
+   https://<tenant-domain>/apps/cockpit-1/iframe.html?hideHeader=true&hideNavigator=true#/device/<device-id>/dashboard/<dashboard-id>
    ```
 
 ---
