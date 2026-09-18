@@ -72,7 +72,7 @@ To overcome these constraints, the integration utilizes two core components:
 
 ## 4. Configure Web Container in SAP FSM
 
-1. Log into the [SAP FSM Admin Application](https://de.fsm.cloud.sap/admin).
+1. Log into the SAP FSM Admin Application (ex : https://de.fsm.cloud.sap/admin).
 2. Select your target company.
 3. Navigate to **Web Container** (located at the bottom of the left navigation pane).
 4. Click **Create** and configure the container settings:
