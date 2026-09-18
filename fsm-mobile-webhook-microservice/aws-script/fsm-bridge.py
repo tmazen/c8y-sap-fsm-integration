@@ -12,7 +12,7 @@ C8Y_URL = "https://<tenant domain>/service/c8y-fsm-mob-ms-py/c8y/dashboard"
 #C8Y_CREDENTIALS = "your_tenant/your_username:your_password"
 
 # Encode the credentials for the Basic Auth header
-encoded_auth = "Basic <Encoded Authorization>"
+encoded_auth = "Basic <base64-credentials>"
 AUTH_HEADER = {"Authorization": f"{encoded_auth}"}
 
 
