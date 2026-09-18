@@ -25,7 +25,7 @@ To overcome these constraints, the integration utilizes two core components:
 
 ### 1. Create Dashboard & Tenant Option in Cumulocity
 
-1. Create a mobile-friendly dashboard in Cumulocity IoT (recommended layout: one widget per row).
+1. Create a mobile-friendly dashboard in Cumulocity (recommended layout: one widget per row).
 2. Configure the following Tenant Option in Cumulocity:
 
 ```json
