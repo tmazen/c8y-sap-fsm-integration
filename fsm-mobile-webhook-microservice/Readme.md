@@ -60,8 +60,8 @@ To overcome these constraints, the integration utilizes two core components:
    ngrok config add-authtoken <Auth Token>
    ```
 5. **Upload Bridge Scripts:** Upload the following files to `fsm-mob-bridge`:
-   * `fsm-bridge.py` (Proxy script)
-   * `start_bridge.sh` (Startup runner script)
+   * [`fsm-bridge.py`](./aws-script/fsm-bridge.py) (Proxy script)
+   * [`start_bridge.sh`](./aws-script/start_bridge.sh) (Startup runner script)
 6. **Execution:** Run `start_bridge.sh`. This script:
    * Starts `fsm-bridge.py` and ngrok in the background.
    * Outputs logs to `bridge.log` in the current directory.
