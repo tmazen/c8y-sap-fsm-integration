@@ -26,7 +26,8 @@ This guide details how to embed a Cumulocity Cockpit dashboard into an iFrame an
 
 1. **Download Source:** Clone or download the Login Application repository from GitHub: [Cumulocity-IoT/login](https://github.com/Cumulocity-IoT/login).
 2. **Duplicate Entrypoint:** Inside the `src/` directory, duplicate `index.html` and name the copy `iframe.html`.
-3. **Build Application:** Run the build process via CLI (requires Node.js & Angular CLI):
+3. **Build Application:** Run the build process via CLI (requires Node.js & Angular CLI Check this link for [installtion steps](https://cumulocity.com/codex/quick-start/installation-setup/overview<img width="468" height="25" alt="image" src="https://github.com/user-attachments/assets/2528f7eb-3429-4007-be0b-b4e762bdcd5f" />
+):
    ```bash
    ng build
    ```
