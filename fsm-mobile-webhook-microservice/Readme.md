@@ -1,6 +1,6 @@
 # How to Open Cumulocity Dashboard in SAP FSM Mobile App
 
-This guide details how to extend the SAP FSM Mobile App using Web Containers to render an embedded Cumulocity IoT Dashboard.
+This guide details how to extend the SAP FSM Mobile App using Web Containers to render an embedded Cumulocity Dashboard.
 
 ---
 
