@@ -123,7 +123,7 @@ Create a local HTML file to frame the embedded dashboard:
 
 ## 5. Configure SAP FSM Extension
 
-1. Log into the SAP FSM Shell interface (`https://de.fsm.cloud.sap/shell/#/`).
+1. Log into the SAP FSM Shell interface (ex : `https://de.fsm.cloud.sap/shell/#/`).
 2. Click **Foundational Services**.
 3. Select **Installed Extensions** from the left pane.
 4. Click **Add Extension** and paste your direct AWS S3 Object HTTPS URL into the **Access URL** field.
