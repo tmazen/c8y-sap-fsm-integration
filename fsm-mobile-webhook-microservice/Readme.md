@@ -10,7 +10,7 @@ The SAP FSM Mobile App can be extended to view information from external platfor
 
 * **HTTP Method Constraint:** SAP FSM Web Containers can only send `POST` requests to the configured target URL.
 * **Header Restriction:** Web Containers cannot append custom HTTP Headers (such as an `Authorization` header) to outbound requests.
-* **Cumulocity Requirement:** Cumulocity IoT endpoints reject any incoming `POST` requests that do not present a valid `Authorization` header.
+* **Cumulocity Requirement:** Cumulocity endpoints reject any incoming `POST` requests that do not present a valid `Authorization` header.
 
 ### Solution Architecture
 
