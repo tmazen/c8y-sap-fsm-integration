@@ -40,7 +40,7 @@ To overcome these constraints, the integration utilizes two core components:
 
 ## 2. Deploy Microservice & Prepare Service Credentials
 
-1. Deploy the `c8y-fsm-mob-ms-py` Python microservice to your Cumulocity tenant.
+1. Deploy the [`c8y-fsm-mob-ms-py`](./c8y-fsm-mob-ms-py/app) Python microservice to your Cumulocity tenant.
 2. Create a dedicated user in the Cumulocity tenant with **least security privileges** (only the roles required to access the target dashboard).
 3. Generate the Base64 Authorization Header for this user (e.g., `Basic <base64-credentials>`).
 4. Update `fsm-bridge.py` by setting the `encoded_auth` variable value to the generated `Authorization` header string.
