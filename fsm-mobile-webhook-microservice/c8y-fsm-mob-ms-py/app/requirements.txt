@@ -1,0 +1,7 @@
+Flask==3.0.0
+gunicorn==21.2.0
+c8y-api==1.8.1
+python-dotenv==1.0.0
+requests==2.31.0
+Werkzeug==3.0.1
+flask-cors==6.0.2

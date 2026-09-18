@@ -1,0 +1,35 @@
+{
+  "apiVersion": "2",
+  "version": "1.0.20",
+  "provider": {
+    "name": "Cumulocity"
+  },
+  "isolation": "PER_TENANT",
+  "replicas": 1,
+  "resources": {
+    "memory": "256M",
+    "cpu": "0.25"
+  },
+  "livenessProbe": {
+    "httpGet": {
+      "path": "/health",
+      "port": 80
+    },
+    "initialDelaySeconds": 30,
+    "periodSeconds": 10,
+    "failureThreshold": 3
+  },
+  "readinessProbe": {
+    "httpGet": {
+      "path": "/health",
+      "port": 80
+    },
+    "initialDelaySeconds": 20,
+    "periodSeconds": 10,
+    "failureThreshold": 3
+  },
+  "requiredRoles": [
+    "ROLE_OPTION_MANAGEMENT_READ"
+  ],
+  "roles": []
+}
