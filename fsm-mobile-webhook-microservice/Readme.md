@@ -44,6 +44,7 @@ To overcome these constraints, the integration utilizes two core components:
 2. Create a dedicated user in the Cumulocity tenant with **least security privileges** (only the roles required to access the target dashboard).
 3. Generate the Base64 Authorization Header for this user (e.g., `Basic <base64-credentials>`).
 4. Update [`fsm-bridge.py`](./aws-script/fsm-bridge.py) by setting the `encoded_auth` variable value to the generated `Authorization` header string.
+5. Update [`fsm-bridge.py`](./aws-script/fsm-bridge.py) by setting tenant domain in the  `C8Y_URL` variable.
 
 ---
 
