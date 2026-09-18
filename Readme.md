@@ -49,9 +49,8 @@ This repository contains a comprehensive suite of microservices, extensions, and
 ### 3. `fsm-extension`
 * **Purpose:** Enables field technicians using the SAP FSM Web Portal to inspect real-time device telemetry.
 * **Key Features:**
-  * **Cloned Cockpit Entrypoint:** Uses a custom `iframe.html` entrypoint to strip top headers and side navigators (`hideHeader=true&hideNavigator=true`).
+  * **Cloned Cockpit Entrypoint:** Uses a custom `iframe.html` entrypoint.
   * **AWS S3 Static Hosting:** Hosts the HTTPS HTML wrapper on Amazon S3 for compliance with SAP FSM extension security policies.
-  * **Target Outlet:** Assigned to the `Service Call Modal Outlet Tab` in SAP FSM.
 
 ---
 
@@ -65,13 +64,13 @@ This repository contains a comprehensive suite of microservices, extensions, and
 
 ## Prerequisites Across All Components
 
-1. **Cumulocity IoT Tenant:**
+1. **Cumulocity Tenant:**
    * Administrative privileges to deploy microservices and configure tenant options.
    * The core **Service Request Mgmt Service** microservice must be pre-deployed on the tenant.
    * **Basic Authentication** enabled for iFrame dashboard embedding.
 2. **SAP FSM Account:**
-   * Access to the SAP FSM Admin Portal and Shell (`https://de.fsm.cloud.sap`).
-   * OAuth credentials (Client ID, Client Secret, Account, and Company).
+   * Access to the SAP FSM Admin Portal and Shell (ex : `https://de.fsm.cloud.sap`).
+   * SAP FSM credentials (Client ID, Client Secret, Account, and Company).
 3. **Infrastructure & Hosting:**
    * AWS Account (EC2 for mobile bridge, S3 for web extension hosting).
    * Docker & Java 17+ / Python 3 build environments.
