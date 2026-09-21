@@ -93,6 +93,8 @@ Build and deploy the [Cumulocity FSM Sync Microservice](../fsm-syn-microservice/
 
 ![Execute Action Configuration](image_6.png)
 
+![Execute Action Configuration](image_7.png)
+
 7. Click **Update & Validate**.
 
 ---
