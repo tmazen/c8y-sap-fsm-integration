@@ -38,6 +38,8 @@ This guide outlines how to enable or disable maintenance mode in Cumulocity for 
 
 ![Custom Field Settings](image_3.png)
 
+![Custom Field Settings](image_7.png)
+
 10. **Activate** the screen configuration.
 
 ---
@@ -79,6 +81,7 @@ Build and deploy the [Cumulocity FSM Sync Microservice](../fsm-syn-microservice/
    * **Execution Count:** `1`
    * **Method:** `POST`
    * **URL:** `https://<your-tenant>.cumulocity.com/service/c8y-fsm-sync-ms-java/maintenanceMode/updateMaintenanceMode`
+   * **Header:** `Authorization` : `Basic <base64-credentials>`
    * **Content Type:** `application/json`
    * **Body:**
      ```json
