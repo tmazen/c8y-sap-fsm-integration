@@ -4,6 +4,14 @@ This guide details how to embed a Cumulocity Cockpit dashboard into an iFrame an
 
 ---
 
+## Overview
+
+SAP FSM allows field technicians to view contextual data from external platforms via embedded extensions. This project packages a custom Cumulocity Cockpit iFrame wrapper hosted on **AWS S3** to render telemetry and device controls directly within SAP FSM.
+
+> [!NOTE]
+> **Authentication Flow:** If the user is not logged into Cumulocity, they will be redirected to a custom login page to enter their username and password.
+
+---
 ## Prerequisites & Known Constraints
 
 > [!WARNING]
