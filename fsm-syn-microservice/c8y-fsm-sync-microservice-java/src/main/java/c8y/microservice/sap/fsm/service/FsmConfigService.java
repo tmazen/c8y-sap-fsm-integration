@@ -72,7 +72,7 @@ public class FsmConfigService {
         optionPK.setKey(key);
 
         String optoinValue = tenantOptionApi.getOption(optionPK).getValue();
-        log.info("Get Option key {} in  category {} and value is {}", key, category, optoinValue);
+        //log.info("Get Option key {} in  category {} and value is {}", key, category, optoinValue);
 
         return optoinValue;
     }
